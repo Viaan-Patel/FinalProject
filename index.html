@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>session 47</title>
+
+<style>
+#div1{
+    height:400px;
+    padding-top:30px;
+    background-image: url(https://img.magnific.com/free-vector/neon-quiz-show-frame-brick-wall_1308-181066.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table{
+    width:100%;
+    text-align:center;
+    font-size: 20px;
+}
+a{
+   color:yellow;
+   text-decoration: none;
+   font-weight: bold;
+}
+#welcome{
+    text-align: center;
+    color:darkgreen;
+    font-size: 20px;
+    font-weight:bold;
+    margin-top: 15px;
+}
+body{
+    margin:0;
+    animation: viaan 6s infinite;
+}
+@keyframes viaan{
+    0%{background-color: lightseagreen;}
+     25%{background-color: lightgoldenrodyellow;}
+      50%{background-color: lightslategray;}
+       75%{background-color: lightcoral;}
+        100%{background-color: lightgreen;}
+}
+h2{
+text-align: center;
+margin-top:20px;
+animation: viaan1 2s infinite alternate;
+}
+@keyframes viaan1{
+    from{font-size: 20px; color:green;}
+    to{font-size: 25px; color: blue;}
+}
+.quiz-section{
+    display:flex;
+    justify-content: space-between;
+    gap:25px;
+    padding:40px;
+    background-color: aquamarine;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: transparent;
+    width:32%;
+    text-align:center;
+    font-size: 18px;
+}
+.card img{
+    width:90%;
+    height:auto;
+    border-radius: 5px;
+}
+.card p{
+    text-align:justify;
+    padding:10px;
+}
+button{
+    border-radius:5px;
+    border:none;
+    background-color: brown;
+    cursor:pointer;
+    padding:10px 15px;
+}
+.quiz-box{
+    text-align:center;
+    font-size:20px;
+    padding:20px;
+    margin:30px;
+    border-radius:5px;
+    background-color: burlywood;
+    display:none;
+}
+</style>
+</head>
+<body onload="register()">
+<div id="div1">
+<table>
+<tr>
+<th><a href="#">Home</a></th>
+<th><a href="#english-quiz">English</a></th>
+<th><a href="#geography-quiz">Geography</a></th>
+<th><a href="#maths-quiz">Maths</a></th>
+</tr>
+</table>
+<h1 style="padding:100px; text-align:center; opacity:0.3; color:white;">Codeyoung</h1>
+</div>
+
+<h2>Your name is registered below</h2>
+<p id="welcome"></p>
+
+<!-- second part of project starts -->
+<div class="quiz-section">
+<div class="card">
+<img alt="English" src="https://media.istockphoto.com/id/1437535145/vector/english-hand-drawn-doodles-and-lettering.jpg?s=612x612&w=0&k=20&c=77N8ZSTa0n31YMQlWU17xFqaeOV4rVnS6IQijdtu8BI=">
+<p>In English grammar, a subject is the noun, pronoun, or phrase that performs the action or controls the verb in a sentence. For example, in the sentence "The dog chased the ball," the subject is "The dog". It typically appears at the beginning of a sentence.</p>
+<button onclick="showEnglish()">Start English Quiz</button>
+</div>
+
+<div class="card">
+<img alt="Geography" src="https://t4.ftcdn.net/jpg/02/43/47/67/360_F_243476769_d15WIB1ERQTzvRW51NTMOi5guTvoBOrf.jpg">
+<p>Geography is the study of the Earth's physical features, human societies, and the dynamic interactions between the two. It seeks to understand where things are, why they are located there, and how they develop and change over space and time.</p>
+<button onclick="showGeography()">Start Geography Quiz</button>
+</div>
+
+<div class="card">
+<img alt="Maths" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq7Q2ZD8DG9vokA3vHnwAlUxvm8ScyQ7TFLwjBBAOYmOiwxO6KeTjhP4A&s=10">
+<p>Mathematics (often abbreviated as "math" or "maths") is the abstract study of numbers, quantities, space, and structures. It serves as the foundational language for science, technology, engineering, and finance, allowing us to model the world and solve complex, real-world problems.</p>
+<button onclick="showMaths()">Start Maths Quiz</button>
+</div>
+
+</div>
+<hr>
+<!-- quiz questions start -->
+<div class="quiz-box" id="english-quiz">
+<h2>English Quiz</h2>
+
+<p>1. Which is PAST TENSE?</p>
+<button onclick="rightAnswer()">Walked</button>
+    <button onclick="wrong-answer()">Walking</button>
+
+<p>2. Should there be a capital letter in a name?</p>
+<button onclick="rightAnswer()">Yes</button>
+    <button onclick="wrongAnswer()">No</button>
+
+<p>3. Which is better for against or for story?</p>
+<button onclick="rightAnswer()">Persuasive</button>
+    <button onclick="wrongAnswer()">Narritive</button>
+
+<p>4. Is grammar important in english exam's?</p>
+<button onclick="rightAnswer()">Definitely</button>
+    <button onclick="wrongAnswer()">Not at all</button>
+
+<p>5. What is the name of paragraph at the end of a story?</p>
+<button onclick="rightAnswer()">Introduction</button>
+    <button onclick="rightAnswer()">Conclusion</button>
+
+</div>
+
+<div class="quiz-box" id="maths-quiz">
+<h2>Maths Quiz</h2>
+<p>1. What is 4 times 12?</p>
+<button onclick="rightAnswer">48</button>
+    <button onclick="wrongAnswer()">40</button>
+
+<p>2. What does algebra have?</p>
+<button onclick="rightAnswer()">Letters and numbers</button>
+    <button onclick="wrongAnswer()">Just numbers</button>
+
+
+<p>3. What is the area of a circle called?</p>
+<button onclick="rightAnswer()">Circumfrence</button>
+    <button onclick="wrongAnswer()">Radius</button>
+
+
+<p>4. What is 1L in ML?</p>
+<button onclick="rightAnswer()">1000ML</button>
+    <button onclick="wrongAnswer()">100ML</button>
+
+
+<p>5. Is maths important in the future?</p>
+<button onclick="rightAnswer()">YES</button>
+    <button onclick="wrongAnswer()">No</button>
+
+</div>
+
+<div class="quiz-box" id="geography-quiz">
+<h2>Geography Quiz</h2>
+<p>1. What is the biggest country in the world?</p>
+<button onclick="rightAnswer()">Russia</button>
+    <button onclick="wrongAnswer()">USA</button>
+
+<p>2. What is Australia's capital city?</p>
+<button onclick="rightAnswer()">Canberra</button>
+    <button onclick="wrongAnswer()">Melbourne</button>
+
+<p>3. What is the largest ocean in the world?</p>
+<button onclick="rightAnswer()">Pacific ocean</button>
+    <button onclick="wrongAnswer()">Indian ocean</button>
+
+<p>4. What is the populated country in the world?</p>
+<button onclick="rightAnswer()">India</button>
+    <button onclick="wrongAnswer()">Indonesia</button>
+
+<p>5. What is the largest mountain in the world?</p>
+<button onclick="rightAnswer()">Mount Fuji</button>
+    <button onclick="wrongAnswer()">Mount Everest</button>
+
+</div>
+<!-- js starts -->
+<script>
+function register(){
+    let name = prompt("Register your name for the quiz");
+    if(name === null || name.trim() === ""){
+        name = "Guest";
+    }
+
+    document.getElementById("welcome").innerHTML = "Hello "+ name + ", Welcome to TechLearner. Your name is now registered";
+
+<!-- changing background image after user is registered -->
+document.getElementById("div1").style.backgroundImage = "url(https://img.magnific.com/free-psd/3d-rendering-questions-background_23-2151455632.jpg?semt=ais_hybrid&w=740&q=80)";
+}
+
+function rightAnswer(){
+    alert("Your answer is correct");
+}
+
+function wrongAnswer(){
+    alert("Your answer is wrong");
+}
+
+function showEnglish(){
+    document.getElementById("english-quiz").style.display = "none";
+    document.getElementById("maths-quiz").style.display = "none";
+    document.getElementById("geography-quiz").style.display = "none";
+
+    document.getElementById("english-quiz").style.display = "block";
+}
+
+function showGeography(){
+    document.getElementById("english-quiz").style.display = "none";
+    document.getElementById("maths-quiz").style.display = "none";
+    document.getElementById("geography-quiz").style.display = "none";
+
+    document.getElementById("geography-quiz").style.display = "block";
+}
+
+function showMaths(){
+    document.getElementById("english-quiz").style.display = "none";
+    document.getElementById("maths-quiz").style.display = "none";
+    document.getElementById("geography-quiz").style.display = "none";
+
+    document.getElementById("maths-quiz").style.display = "block";
+}
+</script>
+
+</body>
+</html>
